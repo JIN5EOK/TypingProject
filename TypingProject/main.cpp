@@ -2,8 +2,6 @@
 
 int main()
 {
-	std::cout << "This is branch 2" << std::endl;
-	std::cout << "This is branch 2" << std::endl;
-	std::cout << "This is branch 2" << std::endl;
+	std::cout << "This is main" << std::endl;
 	return 0;
 }
