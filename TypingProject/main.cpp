@@ -23,7 +23,7 @@ int main()
 	word.printWords();
 
 	std::cout << std::endl;
-	std::cout << "2번 인덱스 단어 지우기" << std::endl;
+	std::cout << "2번 단어 지우기" << std::endl;
 
 	word.delWord(2);
 	word.printWords();
