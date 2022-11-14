@@ -2,6 +2,6 @@
 
 int main()
 {
-	std::cout << "This is main" << std::endl;
+	std::cout << "This is Mearge" << std::endl;
 	return 0;
 }
