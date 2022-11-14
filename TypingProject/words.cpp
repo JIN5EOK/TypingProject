@@ -35,7 +35,7 @@ int Words::addWord(std::string word) {
 int Words::delWord(int index) {
 	index--; // 사용자가 입력하는 숫자는 1부터 시작하는데 배열은 0부터 시작하므로 1을 빼줌.
 
-	if (0 > index && index > count) // 범위 밖의 값이면 -1 리턴
+	if (0 > index || index >= count) // 범위 밖의 값이면 -1 리턴
 		return -1;
 	else
 	{
