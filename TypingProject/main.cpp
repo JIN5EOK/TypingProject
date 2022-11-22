@@ -42,7 +42,7 @@ void krInputTester()
 					std::cout << "Perfect!" << std::endl;
 
 				else
-					std::cout << "Worng.." << std::endl;
+					std::cout << "Wrong.." << std::endl;
 
 				Sleep(1000);
 				s = words.getWord();
