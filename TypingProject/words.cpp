@@ -1,8 +1,9 @@
 #include "words.h"
 #include <iostream>
 #include <time.h>
+
 // 랜덤한 단어 하나 반환
-std::string Words::getWord() { 
+std::wstring Words::getWord() { 
 	int randNum = rand() % count; // 랜덤값을 단어 개수로 나눈 나머지값을 사용
 	return wordArr[randNum];
 }
@@ -14,11 +15,11 @@ Words::~Words() // 소멸자
 Words::Words() {
 	srand((unsigned int)time(NULL)); // getWord에서 랜덤값을 뽑기 위해 현재 시간을 시드로 사용
 
-	wordArr = new std::string[size];
+	wordArr = new std::wstring[size];
 	count = 0; // 현재 저장된 단어의 개수
 }
 // 단어 추가하기
-int Words::addWord(std::string word) {
+int Words::addWord(std::wstring word) {
 	if (count >= size)
 		return -1; // 단어장의 최대 사이즈를 넘겨서 추가할 수 없음.
 
@@ -44,6 +45,8 @@ int Words::delWord(int index) {
 		count--;
 		return 0;
 	}
+
+	
 }
 void Words::printWords()
 {
@@ -53,7 +56,7 @@ void Words::printWords()
 		if (i % 10 == 0)
 			std::cout << std::endl;
 
-		std::cout << "[" << i + 1 << "] " << wordArr[i] << " ";
+		std::wcout << "[" << i + 1 << "] " << wordArr[i] << " ";
 	}
 	std::cout << std::endl;
 }
