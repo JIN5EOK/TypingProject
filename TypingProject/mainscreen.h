@@ -6,7 +6,6 @@
 #define TYPING 0
 #define POSITION 1
 #define GAME 2
-
 using namespace std;
 
 void setConsol();

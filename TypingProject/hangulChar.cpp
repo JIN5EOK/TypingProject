@@ -36,7 +36,7 @@ wchar_t hangulChar::getText() // 초성,중성,종성의 값에 따라 한글을 조합하여 리턴
 
 void hangulChar::setCho(wchar_t _set)
 {
-	if (cnt < 1) // 1이상 넘어가지 않도록
+	if (cnt < 1) // 1보다 큰 값이면 변경하지 않음
 		cnt = 1;
 
 	choJoongJong[0] = _set;
@@ -44,7 +44,7 @@ void hangulChar::setCho(wchar_t _set)
 }
 void hangulChar::setJoong(wchar_t _set)
 {
-	if (cnt < 2) // cnt값이 2를 넘어가지 않도록 함.
+	if (cnt < 2) // 2보다 큰 값이면 변경하지 않음
 		cnt = 2;
 
 	choJoongJong[1] = _set;
@@ -52,7 +52,7 @@ void hangulChar::setJoong(wchar_t _set)
 }
 void hangulChar::setJong(wchar_t _set)
 {
-	if (cnt < 3) // cnt값이 3을 넘어가지 않도록 함.
+	if (cnt < 3) // 3보다 큰 값이면 변경하지 않음
 		cnt = 3;
 
 	if (_set == NULL) // NULL값 입력이 들어오면 cnt--

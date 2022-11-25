@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include "words.h"
@@ -79,7 +78,14 @@ void krInputTester()
 				std::cout << std::endl;
 				std::cout << "--------------------------------------" << std::endl;
 				korInput::printBuffer();
+
 			}
 		}
 	}
 }
+/*
+int main()
+{
+	krInputTester();
+}
+*/

@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <locale> // 유니코드 관련 헤더
 #include <Windows.h> // 윈도우 키코드를 쓰기위해 include
@@ -22,9 +21,6 @@ void korInput::cursorRight() {
 
 hanguls[cursor].setComplete();
 
-if (cursor == -1)
-	cursor++;
-
 if (cursor < hangulCnt - 1)
 	cursor++;
 
@@ -38,7 +34,9 @@ void korInput::cursorLeft() {
 		cursor--;
 	}
 }
-
+// 초성 ㄱ = 0 ㄲ= 1 중성 ㅏ = 0 1 23  종성  ㄱ =1 
+// 초성 * 588 + 중성 * 28 + 종성
+//
 
 int korInput::combineHangul(wchar_t _target, int _input, wchar_t& _result)
 {
@@ -106,7 +104,7 @@ int korInput::insertNextSlot(wchar_t _cho, wchar_t _joong, wchar_t _jong)
 	if (hangulCnt >= maxCount)
 		return -1;
 
-	if (cursor < hangulCnt - 1) // 커서가 맨앞에 있지 않으면 우측 시프트를 실행
+	if (cursor < hangulCnt - 1) // 커서가 맨뒤에 있지 않으면 우측 시프트를 실행
 	{
 		cursorRight();
 		if (rightShift() == -1)
@@ -263,10 +261,10 @@ int korInput::insertKor(int _hangulCode)
 		cursorRight();
 	}
 
-	if (chkCombine(_hangulCode) == 0) // 글쇠 조합 수행
+	if (chkCombine(_hangulCode) == 0) // 글쇠 조합 수행 
 		return 0; // 성공시 리턴 0
 
-	if (chkInsert(_hangulCode) == 0) // 문자 삽입 수행
+	if (chkInsert(_hangulCode) == 0) // 문자 삽입 수행 
 		return 0; // 성공시 리턴 0
 
 	if (chkDetach(_hangulCode) == 0) // 문자 분리 시도
@@ -345,7 +343,6 @@ void korInput::altEngKor() {
 	isKor = !isKor;
 }
 
-
 int korInput::inputBuffer(int input)
 {
 
@@ -407,17 +404,16 @@ void korInput::printInfo()
 	std::cout << "현재 커서 위치 : " << cursor << " || 텍스트 개수 : " << hangulCnt << std::endl;
 	if (cursor >= 0)
 	{
-		std::cout << "초성 : { ";
+		std::cout << "초성 >> ";
 		std::wcout << hanguls[cursor].getCho();
-		std::cout << " } 중성 : { ";
+		std::cout << " \n중성 >> ";
 		std::wcout << hanguls[cursor].getJoong();
-		std::cout << " } 종성 : { ";
+		std::cout << " \n종성 >> ";
 		std::wcout << hanguls[cursor].getJong();
-		std::cout << " }";
 	}
 	else
 	{
-		std::cout << "입력된 텍스트가 없음.";
+		std::cout << "입력된 텍스트가 없음.\n\n";
 	}
 	std::cout << std::endl;
 }
