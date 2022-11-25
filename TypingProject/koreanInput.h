@@ -74,13 +74,13 @@ class korInput {
 	static void cursorRight(); // 커서를 오른쪽으로 옮긴다.
 	static void cursorLeft(); // 커서를 왼쪽으로 옮긴다.
 	static int combineHangul(wchar_t, int, wchar_t&); // combineMap에 기반하여 한글을 조합한다.
-	static int detachJong(wchar_t); // 종성에 모음을 입력했을때 combineMap에 기반하여 분리시키기
+	static int detachJong(wchar_t); // 종성에 모음을 입력했을때 detachMap에 기반하여 분리시키기
 	static void setCurrCho(wchar_t); // 현재 커서가 가리키는 한글문자의 초성을 변경한다.
 	static void setCurrJoong(wchar_t); // 현재 커서가 가리키는 한글문자의 중성을 변경한다.
 	static void setCurrJong(wchar_t); // 현재 커서가 가리키는 한글문자의 종성을 변경한다.
 	static int insertNextSlot(wchar_t _cho = NULL, wchar_t _joong = NULL, wchar_t _jong = NULL); // 커서를 한칸 옮기고 새로운 글자를 삽입, 매개변수로 넘어온 초,중,종성으로 채운다.
 	static int chkCombine(int); // 입력받은 문자가 한글 조합이 가능한지를 체크하고 가능하면 CombineHangul을 실행해 조합을 수행한다.
-	static int chkDetach(int); // 입력받은 문자와 입력된 종성의 분리가 가능한지를 체크하고 가능하면 detachJong을 실행해 조합을 수행한다.
+	static int chkDetach(int); // 입력받은 문자와 입력된 종성의 분리가 가능한지를 체크하고 가능하면 detachJong을 실행해 분리를 수행한다.
 	static int chkInsert(int); // 초성,중성,종성의 입력이 가능한지 확인한다.
 	static int insertKor(int); // 한글의 입력을 수행한다.
 	static int insertAscii(wchar_t); // 아스키코드의 입력을 수행한다.

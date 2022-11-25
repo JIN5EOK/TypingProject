@@ -78,6 +78,7 @@ void krInputTester()
 				std::cout << std::endl;
 				std::cout << "--------------------------------------" << std::endl;
 				korInput::printBuffer();
+
 			}
 		}
 	}
