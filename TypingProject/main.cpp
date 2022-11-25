@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include "words.h"
@@ -83,4 +82,9 @@ void krInputTester()
 			}
 		}
 	}
+}
+
+int main()
+{
+	krInputTester();
 }

@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <locale> // 유니코드 관련 헤더
 #include <Windows.h> // 윈도우 키코드를 쓰기위해 include
