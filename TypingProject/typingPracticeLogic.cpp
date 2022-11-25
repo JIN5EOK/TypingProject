@@ -121,13 +121,13 @@ void krInputTester()
 	setlocale(LC_ALL, "korean");
 
 	Words words;
-	words.addWord(L"백석대학교 컴퓨터공학부");
-	words.addWord(L"남산위에 저 소나무");
-	words.addWord(L"무궁화 삼천리 화려강산");
-	words.addWord(L"대한사람 대한으로 길이 보전하세");
-	words.addWord(L"이 기상과 이 맘으로 충성을 다 하여");
-	words.addWord(L"동해물과 백두산이 마르고 닳도록");
-	words.addWord(L"하느님이 보우하사 우리나라 만세");
+	words.addWord(L"낄끼빠빠");
+	words.addWord(L"악으로 깡으로 버텨라");
+	words.addWord(L"군침이 싹 돈다");
+	words.addWord(L"어쩔티비");
+	words.addWord(L"갑자기 분위기 싸해짐");
+	words.addWord(L"임포스터");
+	words.addWord(L"멍청비용");
 	
 	gotoxy(4, 1);
 	std::cout << "정확도 : ";
