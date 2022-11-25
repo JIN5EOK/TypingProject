@@ -83,8 +83,9 @@ void krInputTester()
 		}
 	}
 }
-
+/*
 int main()
 {
 	krInputTester();
 }
+*/
