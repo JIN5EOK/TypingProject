@@ -139,11 +139,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="words.cpp" />
+    <ClCompile Include="colorText.cpp" />
+    <ClCompile Include="dinoGame.cpp" />
+    <ClCompile Include="hangulChar.cpp" />
+    <ClCompile Include="hangulTables.cpp" />
+    <ClCompile Include="korInput.cpp" />
+    <ClCompile Include="main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mainScreen.cpp" />
+    <ClCompile Include="screensetting.cpp" />
+    <ClCompile Include="typingPractice.cpp" />
+    <ClCompile Include="words.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="words.h" />
+    <ClInclude Include="koreanInput.h" />
+    <ClInclude Include="mainscreen.h" />
+    <ClInclude Include="typingpractice.h" />
+    <ClInclude Include="words.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

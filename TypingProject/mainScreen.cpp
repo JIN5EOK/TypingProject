@@ -1,4 +1,6 @@
 #include "mainscreen.h"
+#include "koreanInput.h"
+void  krInputTester();
 
 int main() {
     setConsol();
@@ -9,7 +11,8 @@ int main() {
         int n = keyControl();
         switch (n) {
         case TYPING: { // 1번 눌리면 타자 연습으로 이동
-            typingPractice();
+            system("cls");
+            krInputTester();
         }
         case POSITION: { // 2번 눌리면 자리 연습으로 이동
             break;
