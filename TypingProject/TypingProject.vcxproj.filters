@@ -21,10 +21,19 @@
     <ClCompile Include="words.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="colorText.cpp">
+    <ClCompile Include="mainScreen.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="typingPractice.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="dinoGame.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="screensetting.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="colorText.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="hangulChar.cpp">
@@ -36,27 +45,9 @@
     <ClCompile Include="korInput.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="mainScreen.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="typingPractice.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="words.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="typingpractice.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="koreanInput.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="mainscreen.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="dinogame.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
