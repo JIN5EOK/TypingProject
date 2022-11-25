@@ -5,7 +5,7 @@ void  krInputTester();
 int main() {
     setConsol();
     basicDraw();
-    basicText();
+    basicText(); //¤·
     choiceText();
     while (1) {
         int n = keyControl();
