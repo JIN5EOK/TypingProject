@@ -7,3 +7,4 @@ void basicDraw();
 void dinousDraw();
 void scoreDraw();
 void gotoxy(int, int);
+void legUpdate();

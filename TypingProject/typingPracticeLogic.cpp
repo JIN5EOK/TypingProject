@@ -20,7 +20,7 @@ void typingPracticeLogic::printing(wstring _target)
 
 
 	gotoxy(4, 6);
-	std::cout << "                                   ";
+	std::cout << "                                                 ";
 	gotoxy(4, 6);
 
 	int right = 0;

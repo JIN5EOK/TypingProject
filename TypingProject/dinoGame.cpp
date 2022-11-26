@@ -4,39 +4,54 @@ void typingGame() {
     system("cls");
     
     scoreDraw();
-    
+    basicDraw();
+    dinousDraw();
     while (true) { // 게임이 진행되는 동안
-        dinousDraw();
-        basicDraw();
+        legUpdate();
     }
 }
 
-void dinousDraw() {
+void legUpdate() {
     static bool legFlag = false; // 갱신될 때 발의 위치를 바꿈
-    gotoxy(1, 8);
-
-    cout << "         ###### " << endl;
-    cout << "         ## #####" << endl;
-    cout << "         #######" << endl;
-    cout << "     #   ####      " << endl;
-    cout << "     ##  #######  " << endl;
-    cout << "      ## ###### " << endl;
-    cout << "       ##########   " << endl;
-    cout << "        ########   " << endl;
-    cout << "         ######    " << endl;
+    legFlag = !legFlag;
 
     if (legFlag)
     {
+        gotoxy(4, 17);
         cout << "         #   ##    " << endl;
+        gotoxy(4, 18);
         cout << "         ##         ";
     }
     else
     {
+        gotoxy(4, 17);
         cout << "          ##  #     " << endl;
+        gotoxy(4, 18);
         cout << "              ##    ";
     }
+}
 
-    legFlag = !legFlag;
+void dinousDraw() {
+
+    gotoxy(4, 8);
+    cout << "         ###### " << endl;
+    gotoxy(4, 9);
+    cout << "         ## #####" << endl;
+    gotoxy(4, 10);
+    cout << "         #######" << endl;
+    gotoxy(4, 11);
+    cout << "     #   ####      " << endl;
+    gotoxy(4, 12);
+    cout << "     ##  #######  " << endl;
+    gotoxy(4, 13);
+    cout << "      ## ###### " << endl;
+    gotoxy(4, 14);
+    cout << "       ##########   " << endl;
+    gotoxy(4, 15);
+    cout << "        ########   " << endl;
+    gotoxy(4, 16);
+    cout << "         ######    " << endl;
+
 
     // 바닥 그림
     gotoxy(2, 19);
