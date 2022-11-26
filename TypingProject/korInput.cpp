@@ -345,7 +345,6 @@ void korInput::altEngKor() {
 
 int korInput::inputBuffer(int input)
 {
-
 	if (input == 224) // 아스키코드로 표현할 수 없는 일부 키들은 224와 추가코드. 두가지의 코드를 반환함.
 		return -1;
 
@@ -360,17 +359,17 @@ int korInput::inputBuffer(int input)
 		altEngKor();
 		return 0;
 	}
-	else if (input == 83)
+	else if (GetAsyncKeyState(VK_DELETE) & 0x8000)
 	{
 		deleteCursor();
 		return 0;
 	}
-	else if (input == 75)
+	else if (GetAsyncKeyState(VK_LEFT) & 0x8000)
 	{
 		cursorLeft();
 		return 0;
 	}
-	else if (input == 77)
+	else if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
 	{
 		cursorRight();
 		return 0;
@@ -386,7 +385,7 @@ int korInput::inputBuffer(int input)
 		}
 		return 0;
 	}
-
+	
 	return -1;
 }
 void korInput::printBuffer()
@@ -397,36 +396,34 @@ void korInput::printBuffer()
 		std::wcout << hanguls[i].getText();
 		if (i == cursor) textcolor(15, 0);
 	}
-	std::cout << std::endl;
 }
-void korInput::printInfo()
+void korInput::printInfo() // 디버그용
 {
 	std::cout << "현재 커서 위치 : " << cursor << " || 텍스트 개수 : " << hangulCnt << std::endl;
 	if (cursor >= 0)
 	{
-		std::cout << "초성 >> ";
+		std::cout << "초성 -> [";
 		std::wcout << hanguls[cursor].getCho();
-		std::cout << " \n중성 >> ";
+		std::cout << "] 중성 -> [";
 		std::wcout << hanguls[cursor].getJoong();
-		std::cout << " \n종성 >> ";
+		std::cout << "] 종성 -> [";
 		std::wcout << hanguls[cursor].getJong();
+		std::cout << "]";
 	}
 	else
 	{
-		std::cout << "입력된 텍스트가 없음.\n\n";
+		std::cout << "현재 커서에 입력된 텍스트가 없음.";
 	}
 	std::cout << std::endl;
 }
 std::wstring korInput::getWString()
 {
-	
 	std::wstring wStr;
 	
 	for (int i = 0; i < hangulCnt; i++)
 	{
 		wStr += hanguls[i].getText();	
 	}
-	std::cout << std::endl;
 	return wStr;
 }
 void korInput::eraseTexts()

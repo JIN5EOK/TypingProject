@@ -1,15 +1,20 @@
 #include "mainscreen.h"
 
+void krInputTester();
+
+
 int main() {
     setConsol();
     basicDraw();
-    basicText(); //ㅇ
+    basicText();
     choiceText();
     while (1) {
         int n = keyControl();
         switch (n) {
         case TYPING: { // 1번 눌리면 타자 연습으로 이동
             typingPractice();
+            //system("cls");
+            //krInputTester();
         }
         case POSITION: { // 2번 눌리면 자리 연습으로 이동
             break;
@@ -23,23 +28,35 @@ int main() {
 
 void basicDraw() {
     // 첫번째 줄
+    gotoxy(0, 0);
     cout << "┏";
     for (int i = 1; i < 100; i++)
+    {
+        gotoxy(i, 0);
         cout << "━";
+    }
+    gotoxy(100, 0);
     cout << "┓" << endl;
 
     // 중간 줄
     for (int i = 1; i < 20; i++) {
-        cout << "┃";
-        for (int j = 1; j < 100; j++)
-            cout << " ";
-        cout << "┃" << endl;
+        {
+            gotoxy(0, i);
+            cout << "┃";
+            gotoxy(100, i);
+            cout << "┃";
+        }
     }
 
     // 마지막 줄
+    gotoxy(0, 20);
     cout << "┗";
     for (int i = 1; i < 100; i++)
+    {
+        gotoxy(i, 20);
         cout << "━";
+    }
+    gotoxy(100, 20);
     cout << "┛";
 }
 

@@ -2,11 +2,12 @@
 
 void typingGame() {
     system("cls");
-    basicDraw();
+    
     scoreDraw();
-
+    
     while (true) { // 게임이 진행되는 동안
         dinousDraw();
+        basicDraw();
     }
 }
 

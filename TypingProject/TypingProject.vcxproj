@@ -141,29 +141,29 @@
   <ItemGroup>
     <ClCompile Include="colorText.cpp" />
     <ClCompile Include="dinoGame.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">아니오</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="hangulChar.cpp" />
     <ClCompile Include="hangulTables.cpp" />
     <ClCompile Include="korInput.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="typingPracticeLogic.cpp" />
     <ClCompile Include="mainScreen.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">아니오</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="screensetting.cpp" />
     <ClCompile Include="typingPractice.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">아니오</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="words.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dinogame.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">아니오</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="koreanInput.h" />
     <ClInclude Include="mainscreen.h" />
     <ClInclude Include="typingpractice.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">아니오</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="words.h" />
   </ItemGroup>

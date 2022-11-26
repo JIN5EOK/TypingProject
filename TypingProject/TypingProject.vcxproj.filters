@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="typingPracticeLogic.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="words.cpp">
@@ -50,9 +50,6 @@
     <ClInclude Include="words.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="typingpractice.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
     <ClInclude Include="koreanInput.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -60,6 +57,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="dinogame.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="typingpractice.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
