@@ -1,7 +1,6 @@
 #include "typingpractice.h"
 #include "koreanInput.h"
-
-void krInputTester();
+#include "gameLogic.h"
 
 void typingPractice() {
     
@@ -11,11 +10,9 @@ void typingPractice() {
     //scoreManagerText();
     keyboardDraw();
     //wordText();
-    while (true)
-    {
-        gotoxy(45, 6);
-        krInputTester();
-    }
+    
+    typingPracticeLogic game;
+    game.playPractice();
 }
 
 /*

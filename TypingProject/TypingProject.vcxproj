@@ -160,6 +160,7 @@
     <ClInclude Include="dinogame.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">아니오</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="gameLogic.h" />
     <ClInclude Include="koreanInput.h" />
     <ClInclude Include="mainscreen.h" />
     <ClInclude Include="typingpractice.h">

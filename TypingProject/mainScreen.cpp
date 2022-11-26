@@ -1,8 +1,5 @@
 #include "mainscreen.h"
 
-void krInputTester();
-
-
 int main() {
     setConsol();
     basicDraw();
