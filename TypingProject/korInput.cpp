@@ -5,6 +5,7 @@
 #include <map> // map
 #include <vector>
 #include "koreanInput.h"
+#include "words.h"
 /*
 * 유니코드 한글 조합 방식을 사용한 한글 입력기 구현
 */
@@ -13,7 +14,7 @@
 bool korInput::isKor = true;
 int korInput::hangulCnt = 0;
 int korInput::cursor = -1;
-const int korInput::maxCount = 30;
+const int korInput::maxCount = MAXWORDLENGTH;
 hangulChar* korInput::hanguls = new hangulChar[maxCount + 2];
 
 void korInput::cursorRight() {

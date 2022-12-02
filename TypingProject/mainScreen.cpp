@@ -1,26 +1,39 @@
 #include "mainscreen.h"
 
-int main() {
-    setConsol();
-    basicDraw();
-    basicText();
-    choiceText();
+
+
+void mainRun()
+{
+    drawAll();
     while (1) {
         int n = keyControl();
         switch (n) {
         case TYPING: { // 1번 눌리면 타자 연습으로 이동
             typingPractice();
-            //system("cls");
-            //krInputTester();
+            drawAll();
+            break;
         }
         case POSITION: { // 2번 눌리면 자리 연습으로 이동
+            
+            drawAll();
             break;
         }
         case GAME: { // 3번 눌리면 타자 게임으로 이동
             typingGame();
+            drawAll();
+            break;
         }
         }
     }
+    mainRun();
+}
+
+void drawAll()
+{
+    setConsol();
+    basicDraw();
+    basicText();
+    choiceText();
 }
 
 void basicDraw() {
@@ -95,4 +108,9 @@ int keyControl() {
     else if (temp == '3') {
         return GAME;
     }
+}
+
+
+int main() {
+    mainRun();
 }

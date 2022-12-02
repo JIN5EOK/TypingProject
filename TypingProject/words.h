@@ -2,6 +2,8 @@
 #define __WORDS_H__
 #include <string>
 
+#define MAXWORDLENGTH 30;
+
 class Words {
 	std::wstring *wordArr; // 단어 배열
 	const int size = 50; // 단어장의 최대 사이즈	

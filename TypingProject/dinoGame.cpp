@@ -1,34 +1,37 @@
 #include "dinogame.h"
-
+#include "gameLogic.h"
 void typingGame() {
     system("cls");
     
     scoreDraw();
     basicDraw();
     dinousDraw();
-    while (true) { // 게임이 진행되는 동안
-        legUpdate();
-    }
+    speechBubbleDraw();
+    dinoGameLogic dgLogic;
+    dgLogic.run();
+    
 }
 
-void legUpdate() {
-    static bool legFlag = false; // 갱신될 때 발의 위치를 바꿈
-    legFlag = !legFlag;
-
-    if (legFlag)
-    {
-        gotoxy(4, 17);
-        cout << "         #   ##    " << endl;
-        gotoxy(4, 18);
-        cout << "         ##         ";
-    }
-    else
-    {
-        gotoxy(4, 17);
-        cout << "          ##  #     " << endl;
-        gotoxy(4, 18);
-        cout << "              ##    ";
-    }
+void speechBubbleDraw()
+{
+    gotoxy(22, 2);
+    cout << "∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧∧";
+    gotoxy(21, 3);
+    cout << "<                                                                          >";
+    gotoxy(22, 4);
+    cout << "                                                                            >";
+    gotoxy(22, 5);
+    cout << "                                                                            >";
+    gotoxy(21, 6);
+    cout << "<                                                                          >";
+    gotoxy(22, 7); 
+    cout << "∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨";
+    gotoxy(15, 4);
+    cout << "┏━━━━━┛";
+    gotoxy(15, 5);
+    cout << "┃┏━━━━┓";
+    gotoxy(16, 6);
+    cout << "V";
 }
 
 void dinousDraw() {
@@ -51,6 +54,10 @@ void dinousDraw() {
     cout << "        ########   " << endl;
     gotoxy(4, 16);
     cout << "         ######    " << endl;
+    gotoxy(4, 17);
+    cout << "          ##  #     " << endl;
+    gotoxy(4, 18);
+    cout << "              ##    ";
 
 
     // 바닥 그림
@@ -60,8 +67,8 @@ void dinousDraw() {
 }
 
 void scoreDraw() {
-    gotoxy(94, 1);
-    cout << "score";
+    gotoxy(4, 1);
+    cout << "score : 0";
 }
 
 void gameOver() {

@@ -4,7 +4,11 @@
 
 // 랜덤한 단어 하나 반환
 std::wstring Words::getWord() { 
-	int randNum = rand() % count; // 랜덤값을 단어 개수로 나눈 나머지값을 사용
+	int randNum;
+	if (count != 0)
+		randNum = rand() % count; // 랜덤값을 단어 개수로 나눈 나머지값을 사용
+	else
+		randNum = 0;
 	return wordArr[randNum];
 }
 Words::~Words() // 소멸자

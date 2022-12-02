@@ -9,6 +9,7 @@
 #define GAME 2
 using namespace std;
 
+void drawAll();
 void setConsol();
 void basicDraw();
 void basicText();

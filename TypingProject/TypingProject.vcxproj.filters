@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="typingPracticeLogic.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="words.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -43,6 +40,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="screensetting.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="dinoGameLogic.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="typingPracticeLogic.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="gameLogic.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
