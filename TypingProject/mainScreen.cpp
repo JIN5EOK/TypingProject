@@ -112,5 +112,6 @@ int keyControl() {
 
 
 int main() {
+    setlocale(LC_ALL, "korean");
     mainRun();
 }
