@@ -148,6 +148,7 @@
     <ClCompile Include="hangulChar.cpp" />
     <ClCompile Include="hangulTables.cpp" />
     <ClCompile Include="korInput.cpp" />
+    <ClCompile Include="positionPractice.cpp" />
     <ClCompile Include="mainScreen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">아니오</ExcludedFromBuild>
     </ClCompile>

@@ -16,5 +16,6 @@ void basicText();
 int choiceText();
 int keyControl();
 void typingPractice();
+void positionPractice();
 void typingGame();
 void gotoxy(int x, int y);

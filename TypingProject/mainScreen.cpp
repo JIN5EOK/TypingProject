@@ -14,7 +14,7 @@ void mainRun()
             break;
         }
         case POSITION: { // 2번 눌리면 자리 연습으로 이동
-            
+            positionPractice();
             drawAll();
             break;
         }
